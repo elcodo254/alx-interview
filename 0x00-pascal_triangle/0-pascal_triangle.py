@@ -20,8 +20,8 @@ def pascal_triangle(n):
                     """ the first column is always set to 1 """
                     triangle[line].append(1)
                 else:
-                    triangle[line].append(triangle[line-1][col]
-                                          + triangle[line-1][col-1])
+                    triangle[line].append(triangle[line-1][col] +
+                                          triangle[line-1][col-1])
             elif(col == line):
                 """ the diagonal is always set to 1 """
                 triangle[line].append(1)
