@@ -5,7 +5,8 @@ Description:
     A character in UTF-8 can be 1 to 4 bytes long
     The data set can contain multiple characters
     The data will be represented by a list of integers
-    Each integer represents 1 byte of data, therefore you only need to handle the 8 least significant bits of each integer.
+    Each integer represents 1 byte of data, therefore you only need to/
+    handle the 8 least significant bits of each integer.
 """
 
 
@@ -18,9 +19,9 @@ def validUTF8(data):
         True if valid utf-8 encoding, false otherwise.
     """
 
-    bit1 = 1 << 7 #checks if significant byte is 1
-    bit2 = 1 << 6 #checks id 2nd significant byte is 0
-    nbytes = 0    #keeps track of how many 1s before 0 occurs
+    bit1 = 1 << 7  # checks if significant byte is 1
+    bit2 = 1 << 6  # checks id 2nd significant byte is 0
+    nbytes = 0  # keeps track of how many 1s before 0 occurs
 
     if not data or len(data) == 0:
         return True
