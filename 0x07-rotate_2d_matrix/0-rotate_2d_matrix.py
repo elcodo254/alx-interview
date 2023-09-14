@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 module that rotates a 2d matrix at 90 degrees
 """
