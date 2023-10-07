@@ -20,6 +20,7 @@ def countProcess(num):
 
     return p_list
 
+
 def minOperations(n):
     """
     method that returns minimum operation to get n Hs
