@@ -6,15 +6,25 @@ Given a number n, write a method that calcuates the fewest number of
 """
 
 
+def countProcess(num):
+    """ Return list of process until n H """
+    count = 1
+    p_list = []
+    val = num
+    while val != 1:
+        count += 1
+        if val % count == 0:
+            while (val % count == 0 and val != 1):
+                val /= count
+                p_list.append(count)
+
+    return p_list
+
 def minOperations(n):
     """
     method that returns minimum operation to get n Hs
     """
-    operations = 0
-    if n <= 1:
+    if n < 2 or type(n) is not int:
         return 0
-    for i in range(2, n + 1):
-        while n % i == 0:
-            n = n / i
-            operations += i
-    return operations
+    values = countProcess(n)
+    return sum(values)
