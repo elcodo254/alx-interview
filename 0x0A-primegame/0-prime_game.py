@@ -4,6 +4,7 @@ Defines function that determines the winner after a certain number of rounds
 of playing the Prime Game
 """
 
+
 def isWinner(x, nums):
     """
     parameters:
